@@ -1,0 +1,113 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Social Header */
+.social-header {
+  padding: 1rem;
+  border-bottom: 1.5px solid black;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.slogan-container p {
+  color: black;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.nav-flex li {
+  font-size: 1.75rem;
+  transition: all 0.3s ease-in;
+  margin-right: 1rem;
+}
+
+.nav-flex li:not(.no-hover-nav):hover {
+  background-color: #E0A66C;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.3s ease-out;
+}
+
+.btn-nav {
+  background-color: #404040;
+  border: none;
+  margin-right: 1rem;
+}
+
+.jumbo-index h1 {
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.sidenav-servicios div img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.index-container {
+  margin: 3rem;
+}
+
+.index-jumbo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iframe-facebook-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  padding: 3rem;
+  background-color: #f5f5f5;
+  border-bottom: 5px solid #E0A66C;
+}
+
+i.footer-title {
+  color: #E0A66C;
+}
+
+.footer-icon {
+  margin-right: 1rem
+}
+
+.footer-about {
+  background-color: #2e2e2e;
+}
+
+.footer-text-copy {
+  color: white;
+  margin: 1rem;
+}
+
+.footer-links {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-links a {
+  color: white;
+  margin: 1rem;
+}

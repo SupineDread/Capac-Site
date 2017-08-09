@@ -1,0 +1,37 @@
+extends ./layout.pug
+
+block contenido
+  .row.index-container
+    .col-md-12.index-jumbo-container
+      .col-md-10.col-sm-12.jumbotron.jumbo-index
+        h1 "Llega un momento en que es necesario abandonar las ropas usadas que ya tienen la forma de nuestro cuerpo y olvidar los caminos que nos llevan siempre a los mismos lugares. Es momento de la travesía. Y, si no osamos emprenderla nos abremos quedado siempre al margen de nosotros mismos"
+        p -Fernando Pessoa
+      .col-md-2.col-sm-12
+        .row.sidenav-servicios
+          .col-md-12
+            img(src="img/servicios/tindividual.jpg")
+          .col-md-12
+            img(src="img/servicios/tfamiliar.jpg")
+          .col-md-12
+            img(src="img/servicios/arteterapia.webp")
+    .col-md-12
+      hr.divider
+    .col-md-12
+      h1.text-center Servicios
+    .col-md-12
+      h3.text-center(style="color: rgba(0, 0, 0, 0.54)") ¡Asiste a una primera sesión gratuita y a partir de ello, te referiremos al servicio más adecuado para tí!
+    .col-md-6
+      .iframe-facebook-container.col-md-12
+        iframe(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcapac.psico%2F%3Ffref%3Dts&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="400" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true")
+      .iframe-facebook-container.col-md-12
+        a(href="https://twitter.com/CAPAC_PSICO" class="twitter-follow-button" data-show-count="TRUE" data-size="large" data-dnt="true")
+          | Follow @CAPAC_PSICO 
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    .col-md-6
+      if evento
+        h3.text-center #{evento.title}
+        .row
+          .col-md-12
+            img(src=evento.img).img-responsive
+      else
+        h3 No hay evento

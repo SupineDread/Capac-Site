@@ -1,0 +1,78 @@
+doctype html
+html
+  head
+    title CAPAC
+    link(rel="stylesheet", href="css/bootstrap.min.css")
+    link(rel="stylesheet", href="css/font-awesome.min.css")
+    link(rel="stylesheet", href="css/master.css")
+    block styles
+  body
+    .row
+      .col-xs-12.social-header
+        button.btn.btn-primary.btn-nav
+          i.fa.fa-facebook
+        button.btn.btn-primary.btn-nav
+          i.fa.fa-twitter
+    nav.navbar.navbar-default
+      .container-fluid
+        ul.nav.navbar-nav.nav-flex
+          li.no-hover-nav
+            img(src="img/ico/logo-72.png")
+          li.slogan-container.no-hover-nav(style="width: 20%")
+            p
+              em Centro de Atención Psicológica, Arte y Consultoría A.C.
+          li
+            a(href="/") Inicio
+          li
+            a(href="/nosotros") Nosotros
+          li
+            a(href="/servicios") Servicios
+          li
+            a(href="/talleres") Talleres
+          li
+            a(href="/blog") Blog
+          li
+            a(href="/contacto") Contacto
+    block contenido
+    footer
+      .container
+        .row
+          .col-md-3
+            .row
+              .col-xs-12
+                i.fa.fa-map.footer-title.footer-icon
+                i.footer-title Dirección
+              .col-xs-12
+                span Imperial #84
+              .col-xs-12
+                span Col. Industrial G.A.M.
+          .col-md-3
+            .row
+              .col-xs-12
+                i.fa.fa-mobile.footer-title.footer-icon
+                i.footer-title Teléfono
+              .col-xs-12
+                span 04455-15957993
+          .col-md-3
+            .row
+              .col-xs-12
+                i.fa.fa-envelope.footer-title.footer-icon
+                i.footer-title Correo
+              .col-xs-12
+                span capac.psico@gmail.com
+    .row
+      .col-xs-12.footer-about
+        .container
+          .row(style="padding: 1rem")
+            .col-md-6.col-xs-12
+              p.footer-text-copy © . Todos los derechos reservados
+            .col-md-6.col-xs-12.footer-links
+              a(href="/") Inicio
+              a(href="/nosotros") Nostros
+              a(href="/servicios") Servicios
+              a(href="/blog") Blog
+          
+        
+    script(src="js/jquery.min.js")
+    script(src="js/bootstrap.min.js")
+    block scripts
