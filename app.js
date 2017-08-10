@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/nosotros', (req, res) => res.render('nosotros'));
+app.get('/servicios', (req, res) => res.render('servicios'));
 
 // Listen
 app.listen(PORT, () => {

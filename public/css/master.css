@@ -111,3 +111,10 @@ i.footer-title {
   color: white;
   margin: 1rem;
 }
+
+.alianza-container {
+  background-color: #f5f5f5;
+  margin: 2rem;
+  border-radius: 10px;
+  padding: 1rem;
+}
