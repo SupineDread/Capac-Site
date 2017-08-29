@@ -2,8 +2,9 @@ doctype html
 html
   head
     title CAPAC
-    link(rel="stylesheet", href="css/bootstrap.min.css")
+    link(rel="stylesheet", href="css/bt-capac.css")
     link(rel="stylesheet", href="css/font-awesome.min.css")
+    link(rel="stylesheet", href="css/main.css")
     link(rel="stylesheet", href="css/master.css")
     block styles
   body
@@ -27,8 +28,15 @@ html
             a(href="/nosotros") Nosotros
           li
             a(href="/servicios") Servicios
-          li
-            a(href="/talleres") Talleres
+          li.dropdown
+            a.dropdown-toggle(href="#", data-toggle="dropdown")
+              | Talleres 
+              i.fa.fa-angle-down
+            ul.dropdown-menu
+              li
+                a(href="/eventos") Eventos Próximos
+              li
+                a(href="/galeria") Galería
           li
             a(href="/blog") Blog
           li
@@ -71,8 +79,8 @@ html
               a(href="/nosotros") Nostros
               a(href="/servicios") Servicios
               a(href="/blog") Blog
-          
-        
+
+
     script(src="js/jquery.min.js")
     script(src="js/bootstrap.min.js")
     block scripts

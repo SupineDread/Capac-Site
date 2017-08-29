@@ -1,0 +1,19 @@
+extends ./layout.pug
+
+block contenido
+  .container
+    .row
+      each p in entradas
+        .col-md-6.col-sm-12.col-xs-12
+          .entrada.row(style="margin: 1rem")
+            .col-md-12
+              h3.text-center= p.title
+            .col-md-12
+              p.text-center= p.user.name + ', ' + p.createdAt
+            .col-md-12
+              img.img-responsive(src=p.img)
+            .col-md-12
+              p.text-center !{p.text}
+      else
+        h1.text-center No hay entradas registradas
+        

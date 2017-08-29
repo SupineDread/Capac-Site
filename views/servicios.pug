@@ -2,4 +2,72 @@ extends ./layout.pug
 
 block contenido
   .container
-    h1 Contenido
+    .row
+      .col-md-12
+        h2.text-center Nuestros Servicios
+      .col-md-12
+        p.text-center Ofrecemos diferentes servicios, todos ellos enfocados a la salud mental, física y emocional, de niños adolescentes y adultos, contamos con terapia individual, familiar, de pareja, así como talleres para la promoción de la salud, algunos utilizando el arte como un puente para el crecimiento emocional. También ofrecemos talleres de desarollo humano para empresas interesadas en la calidad de vida de sus trabajadores.
+      .col-md-8.col-xs-12
+        .services-info-container
+          .tab-wrap
+            .media
+              .parrent.pull-left
+                ul.nav.nav-tabs.nav-stacked
+                  li.active
+                    a.analistic-01(href="#tab1", data-toggle="tab") Terapia Individual
+                  li
+                    a.analistic-02(href="#tab2", data-toggle="tab") Terapia familiar y de pareja
+                  li
+                    a.tehnical(href="#tab3", data-toggle="tab") Talleres artísticos con enfoque terapéutico
+                  li
+                    a.tehnical(href="#tab4", data-toggle="tab") Talleres psicoeducativos
+                  li
+                    a.tehnical(href="#tab5", data-toggle="tab") Consultoría y desarrollo organizacional
+              .parrent.media-body
+                .tab-content
+                  #tab1.tab-pane.active
+                    .media
+                      .pull-left
+                      .media-body
+                        h4 Terapia Individual
+                        p
+                          | La terapia individual se centra en los malestares personales, en la vida hay muchas situaciones que nos “mueven el piso” y nos rebasan en recursos para afrontar a superar la situación. En esta modalidad, se busca encontrar nuevas respuestas a viejos problemas, así como, mejores respuestas problemas nuevos.
+                          br
+                          |                                                 Si en algún momento, te has sentido fuera de lugar, en situaciones que no comprendes o que te invaden ideas, percepciones o emociones que incomodan, molestan o duelen, puede ser momento de intentar esta opción, contáctanos.
+                          br
+                          |                                                 ¡Contamos con terapia individual para niños, adolescentes y adultos!
+                        img.img-responsive(width="250", height="400", src="img/servicios/tindividual.jpg")
+                  #tab2.tab-pane.in
+                    .media
+                      .media-body
+                        h4 Terapia familiar y de pareja
+                        |                                                  La terapia familiar y/o de pareja es un enfoque que analiza los vínculos establecidos al interior del núcleo familiar, para ello analiza las interacciones de las familias y sus miembros en situaciones de la vida cotidiana. 
+                        br
+                        |                                                 Si por algún motivo consideras que tu relación familiar o con tu contexto ha impactado en ti generando un malestar o bien, si sientes que puedes mejorar los vínculos en la familia, es momento de buscar ayuda ¡Acércate a nosotros!
+                        img.img-responsive(width="250", height="400", src="img/servicios/tfamiliar.jpg")
+                  #tab3.tab-pane
+                    .media
+                      .media-body
+                        h4 Talleres artísticos con enfoque terapéutico
+                        |                                                 En CAPAC contamos con talleres que se basan en manifestaciones artísticas con fines terapéuticos, usando la danza, el teatro, la pintura etc. Se utiliza el arte como un puente que en muchos casos permite que las personas se expresen y simbolicen sus malestares y conflictos. A través del arte se logra también un conocimiento integral de la persona y el hecho de que la misma actividad ya lleve al individuo a actuar, moverse, hacer, hace más sencillo que las personas hagan cambios de comportamiento para su bienestar. 
+                        img.img-responsive(width="250", height="400", src="img/servicios/taeterapeutico.jpg")
+                  #tab4.tab-pane
+                    .media
+                      .media-body
+                        h4 Talleres psicoeducativos
+                        p
+                          | La información es muy importante para decidir y a veces nos ayuda a pasar mejor una situación. En CAPAC tenemos claro que para vivir mejor, también es necesario empoderar a las personas para que tengan toda la información que necesitan sobre los temas que les preocupan.
+                          | Con base en ello, el Centro brinda opciones a sus usuarias y usuarios, tenemos talleres informativos sobre salud mental, género, manejo de emociones y sensibilización sobre necesidades especiales. Acércate al Centro y vive la experiencia CAPAC, infórmate, fórmate y decide, vuélvete la mejor versión de ti misma(o).
+                        img.img-responsive(width="250", height="400", src="img/servicios/tpsicoeducativos.jpg")
+                  #tab5.tab-pane
+                    .media
+                      .media-body
+                        h4 Consultoría y desarrollo organizacional
+                        p
+                          | CAPAC es una comunidad de conocimiento, al interior del Centro se construye un espacio, donde se valora el trabajo en equipo, se respetan las diferencias, trabajamos por mejorar nuestras prácticas valorando y fomentando el reconocimiento de las personas que integramos nuestro espacio.
+                          | A partir de nuestra experiencia y teniendo como base la constante formación de nosotras y nosotros, brindamos un proceso de construcción y mejora de instituciones, organizaciones, equipos y comunidades de trabajo. Construimos “trajes a la medida” para las necesidades de cada espacio, para ello se fomenta una fuerte vinculación que permita una postura conjunta al momento del diagnóstico, la intervención y el seguimiento de cada proceso de intervención.
+                          | ¡Bríndanos la oportunidad de apoyarte en tu organización!
+                        img.img-responsive(width="250", height="400", src="img/servicios/cdorganizacional.jpg")
+      .col-md-4.col-xs-12
+        .services-info-container
+          p ¡Existen muchos mitos sobre la atención psicológica! que es "para locos" que es un lujo inecesario, que no funciona. La realidad es que la salud mental impacta en todos los ámbitos de la vida, sentimental, familiar, laboral etc. y aquél que hace un esfuerzo para mejorar emocional, mental y físicamente esta haciendo una importante inversión en su vida.

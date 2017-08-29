@@ -1,0 +1,43 @@
+extends ./layout.pug
+
+block contenido
+  h1.text-center(style="padding: 1rem") ¿Dónde localizarnos?
+  .gmap-area
+    .container
+      .row
+        .col-sm-6.text-center
+          .gmap
+            iframe(frameborder="0", scrolling="no", marginheight="0", marginwidth="0", src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.3804281073174!2d-99.12784177082162!3d19.476177599178737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f90b96a706bd%3A0xf9a1fc914ce69043!2sImperial+84%2C+Industrial%2C+07800+Ciudad+de+M%C3%A9xico%2C+CDMX!5e0!3m2!1ses!2smx!4v1487535371316")
+        .col-sm-4.map-content
+          ul.row
+            li.col-sm-6
+              address
+                h5 Dirección
+                p
+                  | Imperial #84 
+                  br
+                  | Col. Industrial G.A.M.
+  h1.text-center(style="padding: 1rem") Envíanos un mensaje
+  .row.contact-wrap
+    .status.alert.alert-success(style="display: none")
+    #msj.status.alert.alert-success(style="display: none")
+    form#main-contact-form.contact-form(name="mailForm", method="post", action="SMailer")
+      .col-sm-5.col-sm-offset-1
+        .form-group
+          label Nombre *
+          input#nameField.form-control(type="text", name="name", required="required")
+        .form-group
+          label Email *
+          input#emailField.form-control(type="email", name="email", required="required")
+        .form-group
+          label Telefono
+          input#phoneField.form-control(type="text", name="phone", required="required")
+      .col-sm-5
+        .form-group
+          label Asunto *
+          input#asunto.form-control(type="text", name="subject", required="required")
+        .form-group
+          label Mensaje *
+          textarea#message.form-control(name="message", required="required", rows="8", maxlength="1023")
+        .form-group
+          input.btn.btn-primary.btn-lg(type="submit", name="submit", value="Enviar Mensaje", onclick="clearEverything()")
