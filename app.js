@@ -1,5 +1,6 @@
 const express = require('express');
 const moment = require('moment');
+const _ = require('lodash');
 const PORT = process.env.PORT || 1337;
 const app = express();
 
@@ -29,7 +30,23 @@ app.get('/blog', (req, res) => {
       return temp;
     })});
   });
-})
+});
+
+app.get('/eventos', (req, res) => {
+  request.get(`${API_CAPAC}/evento`, (err, response, body) => {
+    if(err) return res.render('index', {evento: {err: 'No se pudieron cargar los eventos.'}});
+    let eventos = JSON.parse(body).reverse();
+    return res.render('eventos', {eventos, moment});
+  });
+});
+
+app.get('/galeria', (req, res) => {
+  request.get(`${API_CAPAC}/galeria`, (err, response, body) => {
+    if(err) return res.render('index', {evento: {err: 'No se pudieron cargar las galerias.'}});
+    let galerias = JSON.parse(body).reverse();
+    return res.render('galeria', {galerias, moment});
+  });
+});
 
 app.get('/nosotros', (req, res) => res.render('nosotros'));
 app.get('/servicios', (req, res) => res.render('servicios'));

@@ -1,0 +1,30 @@
+extends ./layout.pug
+
+block contenido
+  .container
+    .row
+      each e in eventos
+        .col-md-6(style="padding: 1rem")
+          .row.evento-container
+            .col-md-12
+              h4.text-center= e.title
+            .col-md-12
+              hr.divider
+            .col-md-12
+              .row
+                .col-xs-6
+                  .row
+                    .col-xs-12
+                      strong Información:
+                      p= e.text
+                    .col-xs-12
+                      strong Fecha:
+                      p= moment(e.date).format('DD/MM/YYYY')
+                    .col-xs-12
+                      strong Horario:
+                      p= e.hourStart + ' - ' + e.hourEnd
+                    .col-xs-12
+                      strong Donativo:
+                      p= '$' + e.donation
+                .col-xs-6
+                  img.img-responsive(src=e.img)

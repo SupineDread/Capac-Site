@@ -1,0 +1,17 @@
+extends ./layout.pug
+
+block contenido
+  script(src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js")
+  .container
+    .row
+      each g in galerias
+        .col-md-12
+          .row
+            .col-md-12
+              h3= g.name
+            .col-md-12
+              .galeria(id=g.name)
+                each p in g.pictures
+                  a(href=p)
+                    img(src=p)
+              script lightGallery(document.getElementById('#{g.name}'));
