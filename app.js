@@ -2,7 +2,7 @@ const express = require('express');
 const moment = require('moment');
 const _ = require('lodash');
 const bodyParser = require('body-parser');
-const PORT = process.env.PORT || 1337;
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 const nodemailer = require('nodemailer');
