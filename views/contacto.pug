@@ -21,14 +21,14 @@ block contenido
   .row.contact-wrap
     .status.alert.alert-success(style="display: none")
     #msj.status.alert.alert-success(style="display: none")
-    form#main-contact-form.contact-form(name="mailForm", method="post", action="SMailer")
+    form#main-contact-form.contact-form(name="mailForm", method="post", action="send")
       .col-sm-5.col-sm-offset-1
         .form-group
           label Nombre *
           input#nameField.form-control(type="text", name="name", required="required")
         .form-group
           label Email *
-          input#emailField.form-control(type="email", name="email", required="required")
+          input#emailField.form-control(type="email", name="to", required="required")
         .form-group
           label Telefono
           input#phoneField.form-control(type="text", name="phone", required="required")
@@ -40,4 +40,4 @@ block contenido
           label Mensaje *
           textarea#message.form-control(name="message", required="required", rows="8", maxlength="1023")
         .form-group
-          input.btn.btn-primary.btn-lg(type="submit", name="submit", value="Enviar Mensaje", onclick="clearEverything()")
+          input.btn.btn-primary.btn-lg(type="submit", name="submit", value="Enviar Mensaje")

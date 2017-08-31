@@ -1,14 +1,26 @@
 const express = require('express');
 const moment = require('moment');
 const _ = require('lodash');
+const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 1337;
 const app = express();
+
+const nodemailer = require('nodemailer');
+const transport = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'arcaniteamp@gmail.com',
+    pass: 'trxtrxtrx'
+  }
+});
 
 const request = require('request');
 const API_CAPAC = 'http://104.236.144.72/api/v1';
 
 // Config
 app.set('view engine', 'pug');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // Routes
@@ -51,6 +63,25 @@ app.get('/galeria', (req, res) => {
 app.get('/nosotros', (req, res) => res.render('nosotros'));
 app.get('/servicios', (req, res) => res.render('servicios'));
 app.get('/contacto', (req, res) => res.render('contacto'));
+
+app.post('/send', (req, res) => {
+  transport.sendMail({
+    from: 'CAPAC INFO <arcaniteamp@gmail.com>',
+    to: 'hazielfe@gmail.com',
+    subject: 'CAPAC INFO',
+    html: `
+      <h1>CAPAC INFO</h1><br>
+      <p><strong>Nombre: </strong>${req.body.name}</p><br>
+      <p><strong>Email: </strong>${req.body.to}</p><br>
+      <p><strong>Telefono: </strong>${req.body.phone}</p><br>
+      <p><strong>Asunto: </strong>${req.body.subject}</p><br>
+      <p><strong>Mensaje: </strong>${req.body.message}</p><br>
+    `
+  }, (err, response) => {
+    if(err) return res.render('index', {err: 'No se pudo enviar el formulario.'});
+    res.redirect('/contacto');
+  });
+});
 
 // Listen
 app.listen(PORT, () => {
