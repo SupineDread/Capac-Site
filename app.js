@@ -79,8 +79,10 @@ app.post('/send', (req, res) => {
     `
   }, (err, response) => {
     if(err) {
+      console.log(err);
       res.render('index', {err: 'No se pudo enviar el formulario.'});
     } else {
+      console.log(response);
       res.redirect('/contacto');
     }
   });
