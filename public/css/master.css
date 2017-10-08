@@ -11,16 +11,16 @@ body {
 
 /* Social Header */
 .social-header {
-  padding: 1rem;
+  padding-bottom: 1rem;
   border-bottom: 1.5px solid black;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  padding-right: 3rem;
 }
 
 .nav-flex {
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 1rem;
 }
@@ -34,7 +34,6 @@ body {
 .nav-flex li {
   font-size: 1.75rem;
   transition: all 0.3s ease-in;
-  margin-right: 1rem;
 }
 
 .nav-flex li:not(.no-hover-nav):hover {
@@ -48,6 +47,12 @@ body {
   background-color: #404040;
   border: none;
   margin-right: 1rem;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .jumbo-index h1 {

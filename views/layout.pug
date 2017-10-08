@@ -11,9 +11,9 @@ html
   body
     .row
       .col-xs-12.social-header
-        button.btn.btn-primary.btn-nav
+        a.btn.btn-primary.btn-nav(href="https://www.facebook.com/capac.psico", target="_blank")
           i.fa.fa-facebook
-        button.btn.btn-primary.btn-nav
+        a.btn.btn-primary.btn-nav(href="https://twitter.com/capac_psico", target="_blank")
           i.fa.fa-twitter
     nav.navbar.navbar-default
       .container-fluid
@@ -23,7 +23,7 @@ html
           li.slogan-container.no-hover-nav(style="width: 20%")
             p
               em Centro de Atención Psicológica, Arte y Consultoría A.C.
-          li
+          li()
             a(href="/") Inicio
           li
             a(href="/nosotros") Nosotros
@@ -75,6 +75,7 @@ html
           .row(style="padding: 1rem")
             .col-md-6.col-xs-12
               p.footer-text-copy © . Todos los derechos reservados
+                a(href="/aviso.pdf") &nbsp;Aviso de privacidad
             .col-md-6.col-xs-12.footer-links
               a(href="/") Inicio
               a(href="/nosotros") Nostros

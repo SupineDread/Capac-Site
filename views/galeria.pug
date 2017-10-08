@@ -10,8 +10,8 @@ block contenido
             .col-md-12
               h3= g.name
             .col-md-12
-              .galeria(id=g.name)
+              .galeria.row(id=g.name)
                 each p in g.pictures
-                  a(href=p)
-                    img(src=p)
+                  a(href=p).col-xs-12.col-sm-6.col-md-3
+                    img(src=p).img-responsive
               script lightGallery(document.getElementById('#{g.name}'));
