@@ -1,0 +1,53 @@
+extends ./newlayout.pug
+
+block contenido
+  section#intro.bg-image-parallax(style='background-image: url(img/intro/intro-bg.jpg);')
+    .intro-inner
+      // Element cover
+      span.cover.bg-transparent-1-5-dark.bg-transparent-gradient-2
+      // Begin intro caption
+      .intro-caption.vertical-align-center.text-center.text-white
+        h2.intro-title.font-alter-1
+          span.wow.fadeInDown(data-wow-delay='0.4s', data-wow-duration='0.5s', style="font-size: 2.6rem")  "Llega un
+          span.wow.fadeInDown(data-wow-delay='0.6s', data-wow-duration='0.5s', style="font-size: 2.4rem")  momento en que
+          span.wow.fadeInDown(data-wow-delay='0.8s', data-wow-duration='0.5s', style="font-size: 2.2rem")  es necesario abandonar
+          span.wow.fadeInDown(data-wow-delay='1s', data-wow-duration='0.5s', style="font-size: 2rem")  las ropas usadas que ya tienen la forma de nuestro cuerpo y olvidar los caminos que nos llevan siempre a los mismos lugares. Es momento de la travesía. Y, si no osamos emprenderla nos abremos quedado siempre al margen de nosotros mismos"
+        p.intro-description.wow.fadeIn(data-wow-delay='2.2s') - Fernando Pessoa
+      // End intro caption
+      // Scroll down arrow
+      a.scroll-down-arrow.sm-scroll.text-center.text-white(href='#section-1')
+        span
+          i.fa.fa-chevron-down
+  section#section-1.about-section
+    .container
+      .row
+        .col-md-12
+          // Begin heading
+          .heading.heading-lg.heading-center.heading-hover.wow.fadeIn
+            h2.heading-title Servicios
+            // Begin divider
+            hr.hr-width-1.hr-5x.border-main
+            // End divider
+            p.heading-tescription.lead
+              | ¡Asiste a una primera sesión gratuita y a partir de ello, te referiremos al servicio más adecuado para tí!
+          // End heading
+        // /.col
+      // /.row
+    // /.container
+    .container.margin-top-20
+      .row.wow.fadeIn(data-wow-delay='0.3s')
+        .col-xs-12.col-sm-6
+          iframe(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcapac.psico%2F%3Ffref%3Dts&tabs=timeline&width=400&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="400" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true")
+          a(href="https://twitter.com/CAPAC_PSICO" class="twitter-follow-button" data-show-count="TRUE" data-size="large" data-dnt="true")
+            | Follow @CAPAC_PSICO 
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        .col-xs-12.col-sm-6
+          if evento
+            h3.text-center #{evento.title}
+            .row
+              .col-md-12
+                img(src=evento.img).img-responsive
+          else
+            h3 No hay evento
+    // /.container
+  // End section 1

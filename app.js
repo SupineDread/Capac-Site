@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
   request.get(`${API_CAPAC}/evento`, (err, response, body) => {
     if(err) return res.render('index', {evento: {err: 'No se pudieron cargar los eventos.'}});
     let evento = JSON.parse(body).reverse()[0];
-    return res.render('index', {evento});
+    return res.render('newindex', {evento});
   });
 });
 
@@ -36,7 +36,7 @@ app.get('/blog', (req, res) => {
   request.get(`${API_CAPAC}/entrada`, (err, response, body) => {
     if(err) return res.render('index', {evento: {err: 'No se pudieron cargar las entradas del blog.'}});
     let entradas = JSON.parse(body).reverse();
-    return res.render('blog', {entradas: entradas.map(e => {
+    return res.render('newblog', {entradas: entradas.map(e => {
       let temp = e;
       temp.createdAt = moment(e.createdAt).format('DD/MM/YYYY');
       return temp;
@@ -48,7 +48,7 @@ app.get('/eventos', (req, res) => {
   request.get(`${API_CAPAC}/evento`, (err, response, body) => {
     if(err) return res.render('index', {evento: {err: 'No se pudieron cargar los eventos.'}});
     let eventos = JSON.parse(body).reverse();
-    return res.render('eventos', {eventos, moment});
+    return res.render('neweventos', {eventos, moment});
   });
 });
 
@@ -60,9 +60,9 @@ app.get('/galeria', (req, res) => {
   });
 });
 
-app.get('/nosotros', (req, res) => res.render('nosotros'));
-app.get('/servicios', (req, res) => res.render('servicios'));
-app.get('/contacto', (req, res) => res.render('contacto'));
+app.get('/nosotros', (req, res) => res.render('newnosotros'));
+app.get('/servicios', (req, res) => res.render('newservicios'));
+app.get('/contacto', (req, res) => res.render('newcontacto'));
 
 app.post('/send', (req, res) => {
   transport.sendMail({

@@ -1,0 +1,41 @@
+extends ./newlayout.pug
+
+block contenido
+  section#section-2.services-section.bg-dark.bg-image-parallax(style='background-image: url(img/misc/bg-4.jpg);')
+    // Element cover
+    span.cover.bg-transparent-9-dark
+    .container
+      .row
+        // Left column
+        .col-md-6
+          // Begin heading
+          .heading.heading-lg.text-white.heading-hover.wow.fadeIn(data-wow-delay='0.2s')
+            h2.heading-title ¿Quiénes somos?
+            // Begin divider
+            hr.hr-width-1.hr-5x.border-main
+            // End divider
+            p.heading-tescription.lead.text-gray-2
+              | Somos un grupo multidisciplinario enfocado en la promoción de la salud mental y la intervención terapeútica Trabajamos bajo diferentes enfoques teóricos pues estamos convencidos de que cada persona es única y las diferencias individuales requieren diferentes propuestas de intervención psicológica, por ello trabajamos en conjunto para brindarte la mejor atención.
+            br
+            a.btn.btn-white-bordered.btn-rounded(href='/contacto', target='_blank')  ¡Contáctenos!
+          // End heading
+        // /.col
+        // Right column
+        .col-md-6
+          .row
+            .col-md-12
+              // Begin info box-4
+              .info-box.info-box-4.info-box-white.wow.fadeIn
+                span.info-box-icon.rounded-icon.bg-main.text-white
+                  i.fa.fa-globe
+                .info-box-info
+                  h4.info-box-title Alianza CAPAC
+                  p.info-box-text.text-gray-2
+                    | Nuestro compromiso es brindar la mejor atención, por ello nuestro modelo de trabajo incluye establecer alianzas con otros profesionales de la salud, para brindar a cada persona una atención especializada y acorde a sus necesidades.
+              // End info box-4
+            // /.col
+          // /.row
+        // /.col
+      // /.row
+    // /.container
+  // End section 2

@@ -1,0 +1,79 @@
+extends ./newlayout.pug
+  
+block contenido
+  section#section-8.contact-section.bg-dark.bg-image-parallax(style='background-image: url(img/misc/bg-1.jpg);')
+    // Element cover
+    span.cover.bg-transparent-9-dark.bg-transparent-gradient-1
+    .container
+      .row.wow.fadeIn
+        // Left column
+        .col-md-7
+          // Begin heading
+          .heading.heading-lg.heading-hover
+            h2.heading-title.text-white Contacto
+            // Begin divider
+            hr.hr-width-1.hr-5x.border-main
+            // End divider
+            .row
+              .col-md-12
+                .gmap
+                  iframe(frameborder="0", scrolling="no", marginheight="0", marginwidth="0", src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.3804281073174!2d-99.12784177082162!3d19.476177599178737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f90b96a706bd%3A0xf9a1fc914ce69043!2sImperial+84%2C+Industrial%2C+07800+Ciudad+de+M%C3%A9xico%2C+CDMX!5e0!3m2!1ses!2smx!4v1487535371316")
+          // End heading
+        // /.col
+        // Right column
+        .col-md-5.text-gray-2.padding-left-40
+          .contact-info
+            p
+              i.fa.fa-home
+              |  Imperial #84 Col. Industrial G.A.M.
+            p
+              i.fa.fa-phone
+              |  04455-15957993
+            p
+              i.fa.fa-envelope
+              a(href='mailto:capac.psico@gmail.com', target='_blank') capac.psico@gmail.com
+          h5.margin-top-40.margin-bottom-20 Redes Sociales:
+          // Begin social icons
+          ul.social-icons.margin-bottom-20
+            li
+              a.btn.btn-social-min.btn-white-bordered.btn-rounded-full.btn-lg(href='https://www.facebook.com/capac.psico', target='_blank')
+                i.fa.fa-facebook
+            li
+              a.btn.btn-social-min.btn-white-bordered.btn-rounded-full.btn-lg(href='https://twitter.com/capac_psico', target='_blank')
+                i.fa.fa-twitter
+          // End social icons
+        // /.col
+      // /.row
+      .row
+        .col-md-12
+          // Begin contact form
+          h1.text-center(style="padding: 1rem") Envíanos un mensaje
+          .row.contact-wrap
+            .status.alert.alert-success(style="display: none")
+            #msj.status.alert.alert-success(style="display: none")
+            form#main-contact-form.contact-form(name="mailForm", method="post", action="send")
+              .col-sm-5.col-sm-offset-1
+                .form-group
+                  label Nombre *
+                  input#nameField.form-control(type="text", name="name", required="required")
+                .form-group
+                  label Email *
+                  input#emailField.form-control(type="email", name="to", required="required")
+                .form-group
+                  label Telefono
+                  input#phoneField.form-control(type="text", name="phone", required="required")
+              .col-sm-5
+                .form-group
+                  label Asunto *
+                  input#asunto.form-control(type="text", name="subject", required="required")
+                .form-group
+                  label Mensaje *
+                  textarea#message.form-control(name="message", required="required", rows="8", maxlength="1023")
+                .form-group
+                  input.btn.btn-primary.btn-lg(type="submit", name="submit", value="Enviar Mensaje")
+
+          // End contact form
+        // /.col
+      // /.row
+    // /.container
+  // End section 8

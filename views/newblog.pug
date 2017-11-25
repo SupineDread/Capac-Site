@@ -1,0 +1,45 @@
+extends ./newlayout.pug
+  
+block contenido
+  section#section-2.services-section.bg-dark
+    .container
+      .row
+        .col-md-12
+          h1 Blog
+        .col-md-12
+          .row
+            each p in entradas
+              .modal.fade(id=p.id)
+                .modal-dialog
+                  .modal-content
+                    .modal-header
+                      button.close(data-dismiss="modal") &times;
+                      h4.modal-title= p.title
+                    .modal-body
+                      .row
+                        .entrada.row(style="margin: 1rem")
+                          .col-md-12
+                            h3.text-center= p.title
+                          .col-md-12
+                            p.text-center= p.user.name + ', ' + p.createdAt
+                          .col-md-12
+                            img.img-responsive(src=p.img)
+                          .col-md-12
+                            p.text-center !{p.text}
+                      .modal-footer
+                        button.btn.btn-default(data-dismiss="modal") Cerrar
+              .col-md-6.col-sm-12.col-xs-12
+                .entrada.row(style="margin: 1rem")
+                  .col-md-12
+                    h3.text-center= p.title
+                  .col-md-12
+                    p.text-center= p.user.name + ', ' + p.createdAt
+                  .col-md-12
+                    img.img-responsive(src=p.img)
+                  .col-md-12
+                    p.text-center !{p.text.length >= 1000 ? p.text.substr(0, 1000) : p.text}
+                  .col-md-12
+                    button.btn.btn-primary(data-toggle="modal", data-target='#'+p.id) Ver más
+            else
+              h1.text-center No hay entradas registradas
+              
