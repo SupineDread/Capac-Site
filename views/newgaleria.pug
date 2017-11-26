@@ -1,0 +1,33 @@
+extends ./newlayout.pug
+
+block contenido
+  section#section-3.portfolio-section.bg-dark
+    .container
+      .row.wow.fadeIn
+        // Left column
+        .col-md-12
+          // Begin heading
+          .heading.heading-lg.heading-center.heading-hover
+            h2.heading-title Galería
+            // Begin divider
+            hr.hr-width-1.hr-5x.border-main
+            // End divider
+          // End heading
+        // /.col
+      // /.row
+    // /.container
+    .container
+      script(src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js")
+      .container
+        .row
+          each g in galerias
+            .col-md-12
+              .row
+                .col-md-12
+                  h3= g.name
+                .col-md-12
+                  .galeria.row(id=g.name)
+                    each p in g.pictures
+                      a(href=p).col-xs-12.col-sm-6.col-md-3
+                        img(src=p).img-responsive
+                  script lightGallery(document.getElementById('#{g.name}'))

@@ -56,7 +56,7 @@ app.get('/galeria', (req, res) => {
   request.get(`${API_CAPAC}/galeria`, (err, response, body) => {
     if(err) return res.render('index', {evento: {err: 'No se pudieron cargar las galerias.'}});
     let galerias = JSON.parse(body).reverse();
-    return res.render('galeria', {galerias, moment});
+    return res.render('newgaleria', {galerias, moment});
   });
 });
 
