@@ -139,3 +139,7 @@ i.footer-title {
   border: 1px solid #d1813a;
   border-radius: 10px;
 }
+
+.justify {
+  text-align: justify;
+}
